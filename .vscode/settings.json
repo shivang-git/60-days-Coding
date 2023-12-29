@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "*.cs": "csharp",
+        "*.py": "python",
+        "*.php": "php",
+        "*.html": "html",
+        "*.txt": "plaintext",
+        "*.js": "javascript",
+        "*.r": "r",
+        "array": "cpp",
+        "bitset": "cpp",
+        "initializer_list": "cpp",
+        "regex": "cpp",
+        "utility": "cpp",
+        "valarray": "cpp"
+    }
+}
