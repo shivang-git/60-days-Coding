@@ -1,4 +1,4 @@
-
+// ===============================Approach 1 (Iterative way)==============
 class Solution
 {
     public:
@@ -39,3 +39,35 @@ class Solution
         
     }
 };
+
+
+// ===========================Approach 2 (Recursive)===============
+class Solution
+{
+    public:
+    int addcarry(Node* head){
+        if(head==NULL){
+            return 1;
+        }
+        int carr=addcarry(head->next);
+        head->data+=carr;
+        if(head->data<10){
+            return 0;
+        }
+        head->data=0;
+        return 1;
+    }
+    Node* addOne(Node *head) 
+    {
+       int carry=addcarry(head);
+       if(carry!=0){
+           Node* newhead=new Node(carry);
+           newhead->next=head;
+           return newhead;
+       }
+       return head;
+        
+    }
+};
+
+
